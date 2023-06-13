@@ -50,3 +50,6 @@ sqlx database create
  # Assuming you used the default parameters to launch Postgres in Docker!
 # export DATABASE_URL=postgres://postgres:password@localhost:5432/newsletter
 sqlx migrate add create_subscriptions_table
+sqlx migrate run
+
+>&2 echo "Postgres has been migrated, ready to go!"
